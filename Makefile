@@ -6,13 +6,13 @@
 #    By: starrit <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 15:02:31 by starrit           #+#    #+#              #
-#    Updated: 2016/12/02 21:15:10 by cbinet           ###   ########.fr        #
+#    Updated: 2017/03/30 16:58:44 by cbinet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fillit
 
-SRCS = ft_addtetrilst.c\
+SRC_NAME = ft_addtetrilst.c\
 	   ft_align.c\
 	   ft_bt_count.c\
 	   ft_bt_getpos.c\
@@ -34,6 +34,10 @@ SRCS = ft_addtetrilst.c\
 	   ft_freelst.c\
 	   ft_intracttetrilst.c\
 	   fillit.c
+
+SRC_PATH = srcs/
+
+SRCS =  $(addprefix $(SRC_PATH), $(SRC_NAME))
 
 OBJS = ft_addtetrilst.o\
 	   ft_align.o\
@@ -59,14 +63,14 @@ OBJS = ft_addtetrilst.o\
 	   fillit.o
 
 
-HEAD = fillit.h libft.h
+LIB = includes/
 
 all: $(NAME)
 
 $(NAME):
-	make re -C libft -f Makefile
-	gcc -Wall -Wextra -Werror -c $(SRCS) 
-	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJS) libft/libft.a
+	make re -C includes/libft -f Makefile
+	gcc -Wall -Wextra -Werror -c -I $(LIB) $(SRCS) 
+	gcc -Wall -Wextra -Werror -o $(NAME) $(OBJS) includes/libft/libft.a
 
 clean:
 	rm -f $(OBJS)
