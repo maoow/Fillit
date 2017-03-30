@@ -6,7 +6,7 @@
 #    By: starrit <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/27 15:02:31 by starrit           #+#    #+#              #
-#    Updated: 2017/03/30 16:58:44 by cbinet           ###   ########.fr        #
+#    Updated: 2017/03/30 17:00:43 by cbinet           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,11 +74,11 @@ $(NAME):
 
 clean:
 	rm -f $(OBJS)
-	make clean -C libft -f Makefile
+	make clean -C includes/libft -f Makefile
 
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C libft -f Makefile
+	make fclean -C includes/libft -f Makefile
 
 re: fclean all
 
