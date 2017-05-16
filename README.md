@@ -4,7 +4,7 @@ program fillit as 42 project.
 
 
 ##  Name
-    fillit - formatted write
+    fillit - organized tetriminos and output the map
 
 ##  Synopsys
     ./fillit source_file
