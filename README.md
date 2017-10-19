@@ -1,7 +1,6 @@
 # Fillit
 program fillit as 42 project.
-# __________________________________________________________________
-
+#
 
 ##  Name
     fillit - organized tetriminos and output the map
